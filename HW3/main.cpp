@@ -47,8 +47,56 @@ void out(std::vector<int> &v) {
     std::cout << std::endl;
 }
 
+void out_srez(std::vector<int> &v, int left, int right) {
+    for (int i = left; i < right + 1; i++) {
+        std::cout << v[i] << " ";
+    }
+    //std::cout << std::endl;
+}
+
 // MAIN PART
 void merger(vec &v, int left, int middle, int right) {
+    // arr1 & arr2 - creation (split V in half)
+    int arr1_size, arr2_size;
+    arr1_size = middle - left + 1;
+    arr2_size = right - middle;
+    vec arr1(arr1_size + 1);
+    vec arr2(arr2_size + 1);;
+    arr1[arr1_size] = INF;
+    arr2[arr2_size] = INF;
+    // arr1 & arr2 forming
+    // TODO ПРОВЕРИТЬ ПРАВИЛЬНОСТЬ ИНДЕКСОВ
+    for (int i = 0; i < arr1_size; i++) {
+        arr1[i] = v[left + i];
+    }
+    for (int i = 0; i < arr2_size; i++) {
+        arr2[i] = v[middle + i + 1];
+    }
+    out(arr1);
+    out(arr2);
+    //MERGING BACK
+    int k = 0, i = 0, j = 0; // k - main, i - arr1,j - arr2
+    while (i < arr1_size && j < arr2_size) {
+        if (arr1[i] < arr2[j]) {
+            v[k] = arr1[i];
+            i++;
+        } else {
+            v[k] = arr2[j];
+            j++;
+        }
+        k++; // next main_v elem
+    }
+
+    while (i < arr1_size) {
+        v[k] = arr1[i];
+        i++;
+        k++;
+    }
+    while (j < arr2_size) {
+        v[k] = arr2[j];
+        j++;
+        k++;
+    }
 
 }
 
@@ -56,11 +104,11 @@ void merger(vec &v, int left, int middle, int right) {
 void merge_rec(vec &v, int left, int right) {
     if (left < right) {
         int middle = (left + right) / 2;
-        for (int i = left; i < right + 1; i++) { std::cout << v[i] << " "; }
-        std::cout << std::endl;
         merge_rec(v, left, middle);
         merge_rec(v, middle + 1, right);
-        // MERGE
+
+        // TODO: MERGE
+        merger(v, left, middle, right);
     }
 }
 
@@ -72,7 +120,7 @@ int main() {
     std::cin.tie(0);
     std::cout.tie(0);
     // MAIN MAIN
-    std::vector<int> a = {0, 1, 2, 3, 4, 5, 6, 7, 8};
+    std::vector<int> a = {1, 2, 3, 4, 5, 6, 7, 8};
     //rnd_v(a,10,10e4);
     merge_rec(a, 0, a.size() - 1);
     std::cout << "________" << std::endl;
