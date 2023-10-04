@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 #include <random>
-
+#include <algorithm>
 typedef long long ll;
 typedef std::vector<int> vec;
 
@@ -75,7 +75,6 @@ void merger(vec &v, int left, int middle, int right) {
         }
         k++; // next main_v elem
     }
-
     while (i < arr1_size) {
         v[k] = arr1[i];
         i++;
@@ -86,6 +85,7 @@ void merger(vec &v, int left, int middle, int right) {
         j++;
         k++;
     }
+
 }
 
 void merge_rec(vec &v, int left, int right) {
@@ -97,6 +97,21 @@ void merge_rec(vec &v, int left, int right) {
     }
 }
 
+bool sort_test(int number_of_test) {
+    for (int i = 0; i < number_of_test; i++) {
+        vec a;
+        rnd_v(a, 100, 10e4);
+        vec b = a;
+        std::sort(b.begin(), b.end());
+        merge_rec(a, 0, a.size() - 1);
+        if (a != b) {
+            out(a);
+            out(b);
+            return 0;
+        }
+    }
+    return 1;
+}
 
 int main() {
     // CPP SPEEDUP
@@ -105,14 +120,11 @@ int main() {
     std::cin.tie(0);
     std::cout.tie(0);
     // MAIN MAIN
-    std::vector<int> a;
-    rnd_v(a, 20, 10e2);
-
-    std::cout << "BEFORE:  ";
-    out(a);
-    merge_rec(a, 0, a.size() - 1);
-    std::cout << "AFTER:  ";
-    out(a);
-
+    int n = 100;
+    if (sort_test(n) == 1) {
+        std::cout << "ALL " << n << " TEST COMPLETED, MERGE SORT WORKS!";
+    } else {
+        std::cout << "MERGE SORT DOESNT WORK, @ALICE3E IS ABOLTUS";
+    }
     return 0;
 }
