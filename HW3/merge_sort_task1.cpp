@@ -86,7 +86,6 @@ void merger(vec &v, int left, int middle, int right) {
         j++;
         k++;
     }
-
 }
 
 void merge_rec(vec &v, int left, int right) {
