@@ -1,0 +1,17 @@
+Index: CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>cmake_minimum_required(VERSION 3.26)\nproject(HW3)\n\nset(CMAKE_CXX_STANDARD 14)\n\nadd_executable(HW3\n        main.cpp\n)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	(revision c84f2f76dc152d5ebd62c1b2bcd8ce13812c9cc2)
++++ b/CMakeLists.txt	(date 1696440203758)
+@@ -4,5 +4,5 @@
+ set(CMAKE_CXX_STANDARD 14)
+ 
+ add_executable(HW3
+-        main.cpp
++        merge_sort_task1.cpp
+ )

@@ -124,7 +124,7 @@ int main() {
     if (sort_test(n) == 1) {
         std::cout << "ALL " << n << " TEST COMPLETED, MERGE SORT WORKS!";
     } else {
-        std::cout << "MERGE SORT DOESNT WORK, @ALICE3E IS ABOLTUS";
+        std::cout << "MERGE SORT DOESNT WORK, @ALICE3E  IS ABOLTUS";
     }
     return 0;
 }
