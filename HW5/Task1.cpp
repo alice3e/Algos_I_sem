@@ -114,9 +114,9 @@ void print_tree(vec& vec) { // ONLY BINARY
 void make_heap(vec &v, int n, int i)
 {
     int largest = i;
-    int l = 2*i + 1; // левый = 2*i + 1
-    int r = 2*i + 3; // правый = 2*i + 3
-    int m = 2*i + 2; // средний = 2*i + 2
+    int l = 3*i + 1; // левый = 3*i + 1
+    int r = 3*i + 3; // правый = 3*i + 3
+    int m = 3*i + 2; // средний = 3*i + 2
     // Если левый дочерний элемент больше корня
     if (l < n && v[l] > v[largest])
         largest = l;
