@@ -45,24 +45,10 @@ void print_int_v(vector<ll> &v) {
     cout << endl;
 }
 
-// Функция для нахождения максимальной цифры в числе
-int getMaxDigit(int num) {
-    int maxDigit = 0;
-    while (num > 0) {
-        int digit = num % 10;
-        if (digit > maxDigit) {
-            maxDigit = digit;
-        }
-        num /= 10;
-    }
-    return maxDigit;
-}
-
 // Функция для сортировки вектора с использованием сортировки по разрядам
 void radixSort(vec& arr, int maxElement) {
-    int maxDigit = getMaxDigit(maxElement);
-
     for (int exp = 1; maxElement / exp > 0; exp *= 10) {
+        cout << exp << " ";
         int n = arr.size();
         vector<int> output(n);
         vector<int> count(10, 0);
@@ -84,6 +70,7 @@ void radixSort(vec& arr, int maxElement) {
             arr[i] = output[i];
         }
     }
+    cout << endl;
 }
 
 // Функция для сравнения времени выполнения двух других функций
@@ -121,8 +108,23 @@ void time_test(auto &v, void (*test_srt)(vec &x,const int max_el)){
 
 }
 
+// ДОКАЗАТЕЛЬСТВО
+/*
+Внешний цикл for (int exp = 1; maxElement / exp > 0; exp *= 10):
+Этот цикл выполняется k раз
 
+Первый внутренний цикл for (int i = 0; i < n; i++) выполняется n раз, где n - размер входного вектора arr.
+Второй внутренний цикл for (int i = 1; i < 10; i++) выполняется постоянное количество раз (10 раз).
+Третий внутренний цикл for (int i = n - 1; i >= 0; i--) также выполняется n раз.
 
+общая асимптотика функции radixSort можно оценить как O(k * n),
+где k - количество разрядов в максимальном элементе maxElement, а n - размер входного вектора arr.
+
+ТК k < log10(N^3-1) -> k == n
+O(k+n) -> O(2n) -> O(n)
+доказано
+
+*/
 int main() {
     // CPP SPEEDUP
     setlocale(LC_ALL, "Russian");
