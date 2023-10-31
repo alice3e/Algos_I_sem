@@ -1,0 +1,22 @@
+# ninja log v5
+0	162	1698228267508000805	DateConverter_lib/CMakeFiles/DateConverter_lib.dir/Gregorian.cpp.o	a6de8b3017db81b2
+0	163	1698228267508352719	DateConverter_lib/CMakeFiles/DateConverter_lib.dir/Julian.cpp.o	2a179e21f236c155
+0	73	1698228450372465175	SortingAlgos_lib/CMakeFiles/SortingAlgos_lib.dir/Gregorian.cpp.o	5fd8267a3c63c889
+0	73	1698228450372401176	SortingAlgos_lib/CMakeFiles/SortingAlgos_lib.dir/Julian.cpp.o	7666c24721c1edb6
+163	190	1698228267537794000	DateConverter_lib/libDateConverter_lib.a	84af8e01ada724db
+1	2235	1698240873541920670	Google_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	c882444b390b79fe
+48	67	1698241105742963000	lib/libgtest_main.a	d16686b8efe93d70
+755	792	1698783913206969000	SortingAlgos_lib/libSortingAlgos_lib.a	e1c37cbf5f15c61e
+0	386	1698228267732000634	CMakeFiles/DateConverter_run.dir/main.cpp.o	add39242ce66d2e3
+6	394	1698240331845355790	CMakeFiles/SortingAlgos_run.dir/main.cpp.o	e7f3005f00fbcd71
+6	48	1698241105723858000	lib/libgtest.a	eb976c0386e937cc
+1357	1477	1698785302742212287	Google_tests/Google_Tests_run	297e5dd7767745aa
+9	755	1698783913163196355	SortingAlgos_lib/CMakeFiles/SortingAlgos_lib.dir/Radix_firstletter.cpp.o	903c3e46af063b8d
+1	1015	1698240872325625618	Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	2b318443c991862e
+388	429	1698228267776242670	DateConverter_run	c5464497916c3e75
+8	1356	1698785302618458568	Google_tests/CMakeFiles/Google_Tests_run.dir/RadixFirstLetter_Tests.cpp.o	24c7712e39cde0ee
+394	430	1698240331883274917	SortingAlgos_run	a97457068154d6e0
+9	547	1698787006934605845	SortingAlgos_lib/CMakeFiles/SortingAlgos_lib.dir/Radix_MSD_VS_std_sort.cpp.o	70653deede027905
+547	572	1698787006962699000	SortingAlgos_lib/libSortingAlgos_lib.a	583ba3a293dfe437
+10	751	1698787007138435148	Google_tests/CMakeFiles/Google_Tests_run.dir/ALL_Tests.cpp.o	ecae5e9abe2d8daa
+751	808	1698787007197970879	Google_tests/Google_Tests_run	a3fd96c8d61acfc9

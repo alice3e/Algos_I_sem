@@ -1,0 +1,181 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Google_tests/Google_Tests_run"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"Google_tests/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 9,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/Users/alicee/Desktop/\u043a\u043e\u043d\u0441\u043f\u0435\u043a\u0442\u044b/\u041e\u0441\u043d\u043e\u0432\u044b_\u0410\u043b\u0433\u043e\u0440\u0438\u0442\u043c\u043e\u0432/Sorts_Google_Tests/SortingAlgos_lib"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/Users/alicee/Desktop/\u043a\u043e\u043d\u0441\u043f\u0435\u043a\u0442\u044b/\u041e\u0441\u043d\u043e\u0432\u044b_\u0410\u043b\u0433\u043e\u0440\u0438\u0442\u043c\u043e\u0432/Sorts_Google_Tests/Google_tests/lib/googletest/include"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/Users/alicee/Desktop/\u043a\u043e\u043d\u0441\u043f\u0435\u043a\u0442\u044b/\u041e\u0441\u043d\u043e\u0432\u044b_\u0410\u043b\u0433\u043e\u0440\u0438\u0442\u043c\u043e\u0432/Sorts_Google_Tests/Google_tests/lib/googletest"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "SortingAlgos_lib::@06f9693f112d29dd6f38"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "gtest::@30f1f5c04acc29f5722e"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "gtest_main::@30f1f5c04acc29f5722e"
+		}
+	],
+	"id" : "Google_Tests_run::@eb06d550d4862b816b8d",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "SortingAlgos_lib/libSortingAlgos_lib.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "lib/libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "lib/libgtest_main.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "lib/libgtest.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "Google_Tests_run",
+	"nameOnDisk" : "Google_Tests_run",
+	"paths" : 
+	{
+		"build" : "Google_tests",
+		"source" : "Google_tests"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Google_tests/ALL_Tests.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
