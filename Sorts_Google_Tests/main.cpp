@@ -35,12 +35,12 @@ vector <string> random_str(int n,int max_str_len){ // max_el_size = 1eX - мак
 }
 
 void print_str_v(std::vector<string> &v) {
-    for (auto i: v) {
-        std::cout << i << ' ';
+    for (int i = 0; i < v.size();i++) {
+        std::cout << v[i] << ' ';
     }
 }
 
-void print_str_matrix(vector<vector<string>> &v){
+void print_str_matrix(vector<vector<string> >  &v){
     for(int j = 0; j < v.size();j++){
         cout << "[ ";
         print_str_v(v[j]);
@@ -53,7 +53,7 @@ void radix_sort_lsd_withNull(vector <string> &v, const int max_str_len) {
     // [NULL, a, b, .... ]
     int size = v.size();
     for(int i = 0;i < max_str_len;i++){
-        vector<vector<string>> letters(27);
+        vector<vector<string> > letters(27);
         for(int j = 0;j<size;j++){
             int pos;
             if(i < v[j].size()){
@@ -77,7 +77,7 @@ void radix_sort_lsd_firstletter(vector <string> &v, const int max_str_len) {
     // [a, b, .... ]
     int size = v.size();
     for(int i = 0;i < max_str_len;i++){
-        vector<vector<string>> letters(27);
+        vector<vector<string> > letters(27);
         for(int j = 0;j<size;j++){
             int pos;
             if(i < v[j].size()){
@@ -163,11 +163,9 @@ int main() {
     std::cout.tie(0);
     // MAIN MAIN
     // ВСЕ ПИШЕМ В ll иначе тесты не проходит
-    vector <string>  radixsort_withNull_arr, radixsort_firstletter_arr,std_arr,MSD_sort_arr, MSD_sort_arr2;
-    ////{"abc","bcaaa", "vbz", "uyr"};//
-    //{ "midnight", "badge", "bag", "worker", "banner", "wander" };
-    //
-    radixsort_withNull_arr = { "midnight", "badge", "bag", "worker", "banner", "wander" };//{ "lcjlh" , "ytluy" , "cooehah" , "dalbov" , "qegdal" , "oyajp" , "arkfhxas" , "uasjdyp" , "yletcdj" , "vkgrsdr" , "yuup" , "skhrct" , "pllfsf" , "wkgsrugf" , "nnji" , "rlgetxtr" , "kdbeygkl" , "mrtn" , "wevxc" , "khge" , "uitj" , "ogwom" , "bbnf" , "gqkamatb" , "hehpfl" , "qcjdokl" , "txbrvcny" , "eltlmgit" , "fjlr" , "xqauqq" , "kypabli" , "chwn" , "qmvgv" , "gurmma" , "llmejja" , "txcnmipq" , "owwkkkw" , "jimhdg" , "lkqhgpc" , "rvrshv" , "okskbf" , "oeyioyh" , "muvy" , "gjbqj" , "odnyqjkt" , "owhrvab" , "sbsqdwtu" , "svqrxdx" , "beemhkjq" , "kmfycnk" , "kbwatog" , "dgte" , "seqpm" , "caesiou" , "tlds" , "fbgoe" , "xqbgryoe" , "hbnd" , "lhoky" , "hmjy" , "dtrmakc" , "nipksb" , "ucqe" , "ruoo" , "llubc" , "ibqlo" , "gaylptd" , "pqkah" , "vlgdiy" , "yuufu" , "jpxxhcmc" , "wsbmu" , "beenjsab" , "kerh" , "pacrl" , "ugmmtvd" , "mplhriuk" , "yhfpg" , "fijdh" , "dycg" , "gucfoni" , "kmceuu" , "yeetxao" , "hbtpfbja" , "dbfrqsg" , "ytbwfot" , "axvybhj" , "eqmhflee" , "dvtn" , "rjqgofic" , "cbtk" , "mtrmjl" , "bmqps" , "xrwa" , "swwq" , "wdjs" , "brinlgd" , "jgqrfd" , "dctxw" , "xiek"};
+    std::vector < std::string >  radixsort_withNull_arr, radixsort_firstletter_arr,std_arr,MSD_sort_arr, MSD_sort_arr2;
+    std::vector < std::string > inp;
+    radixsort_withNull_arr = random_str(10,10);
     radixsort_firstletter_arr = radixsort_withNull_arr;
     std_arr = radixsort_withNull_arr;
     MSD_sort_arr = radixsort_withNull_arr;
