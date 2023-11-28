@@ -1,6 +1,5 @@
 //
 // Created by alicee on 02.10.2023.
-//
 //main.cpp
 #include <iomanip>
 #include <iostream>
