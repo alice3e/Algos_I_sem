@@ -1,7 +1,3 @@
-//
-// Created by alicee on 02.10.2023.
-//
-//main.cpp
 #include <iomanip>
 #include <iostream>
 #include <vector>
@@ -64,7 +60,7 @@ void merger(vec &v, int left, int middle, int right) {
 
     //MERGING BACK
     int k = left, i = 0, j = 0; // k - main, i - arr1,j - arr2
-    // k = left - ОБЯЗАТЕЛЬНО, ТК МЫ МАССИВ ДЕЛИМ ПРИ РЕКУРСИИ И РАБОТАЕМ ТОЛЬКО С ПОЛОВИНОЙ
+    // k = left - ОБЯЗАТЕЛЬНО, ТАК КАК МЫ МАССИВ ДЕЛИМ ПРИ РЕКУРСИИ И РАБОТАЕМ ТОЛЬКО С ПОЛОВИНОЙ
     while (i < arr1_size && j < arr2_size) {
         if (arr1[i] < arr2[j]) {
             v[k] = arr1[i];
